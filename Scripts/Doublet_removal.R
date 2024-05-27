@@ -37,3 +37,6 @@ write.csv(cellfilt_total, file = "Total_singlet_cell_IDs.csv")
 
 Total_doublet_removed <- Sample_total %>% dplyr::select(EF, cellfilt_total) %>% replace(is.na(.), 0)
 Nascent_doublet_removed <- Sample_nacent %>% dplyr::select(EF, cellfilt_total) %>% replace(is.na(.), 0)
+
+write.csv(Total_doublet_removed, file = "Total_filt.csv")
+write.csv(Nascent_doublet_removed, file = "Nascent_filt.csv")
