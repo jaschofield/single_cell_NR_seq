@@ -1,0 +1,16 @@
+### /fh/fast/hahn_s/user/jschofie/2211_single_cell_pilot.dir/cellranger-7.0.1/lib/bin/STAR   --runMode genomeGenerate   --runThreadN 1   --genomeDir /fh/fast/hahn_s/user/jschofie/2211_single_cell_pilot.dir/cellrang_test.dir/PolyA_10X_genome/star   --genomeFastaFiles /fh/fast/hahn_s/user/jschofie/2211_single_cell_pilot.dir/cellrang_test.dir/PolyA_10X_genome/fasta/genome.fa      --genomeSAindexNbases 10   --genomeChrBinNbits 18   --genomeSAsparseD 1   --limitGenomeGenerateRAM 17179869184   --sjdbGTFfile /fh/fast/hahn_s/user/jschofie/2211_single_cell_pilot.dir/cellrang_test.dir/PolyA_10X_genome/genes/genes.gtf
+### GstrandBit 32
+versionGenome	2.7.1a
+genomeFastaFiles	/fh/fast/hahn_s/user/jschofie/2211_single_cell_pilot.dir/cellrang_test.dir/PolyA_10X_genome/fasta/genome.fa 
+genomeSAindexNbases	10
+genomeChrBinNbits	18
+genomeSAsparseD	1
+sjdbOverhang	100
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	/fh/fast/hahn_s/user/jschofie/2211_single_cell_pilot.dir/cellrang_test.dir/PolyA_10X_genome/genes/genes.gtf
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	14680064 100296120

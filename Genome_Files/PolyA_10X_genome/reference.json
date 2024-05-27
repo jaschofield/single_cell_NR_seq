@@ -1,0 +1,17 @@
+{
+    "fasta_hash": "134734b9c08755479dc0b6a8e9d628afd576cc3d",
+    "genomes": [
+        "PolyA_10X_genome"
+    ],
+    "gtf_hash.gz": "54a0fd7e2ed788136d625ef8c9d19dc6054851f6",
+    "input_fasta_files": [
+        "genome.fa"
+    ],
+    "input_gtf_files": [
+        "cellranger_polyA.gtf"
+    ],
+    "mem_gb": 16,
+    "mkref_version": "cellranger-cellranger-7.0.1",
+    "threads": 2,
+    "version": null
+}
