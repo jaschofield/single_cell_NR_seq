@@ -43,6 +43,8 @@ joined_df <- left_join(TL_counts, bam_df_filt, by = "qname")
 
 TL_filt <- joined_df %>% filter(!is.na(EF))
 
+write.csv(TL_filt, file = "TL_filt.csv")
+
 ## mode function
 getmode <- function(v) {
   uniqv <- unique(v)
@@ -76,13 +78,6 @@ TL_collapsed_tot <- TL_filt %>% dplyr::select(cell_code, mol_code, nT, TC, EF) %
   pivot_wider(names_from = cell_code, values_from = nascent, values_fn = sum)
 head(TL_collapsed_tot)
 write.csv(TL_collapsed_tot, file = "Sample_total_counts.csv")
-
-## collapse into Tsum DF for Fon calculations
-TL_collapsed_Tsum <- TL_filt %>% dplyr::select(cell_code, mol_code, nT, TC, EF) %>%
-  group_by(cell_code, mol_code, EF) %>% filter(nT == getmode(nT)) %>% distinct(.) %>% ungroup() %>%
-  group_by(cell_code, EF) %>% summarise(totN = sum(nT), totMut = sum(TC))
-head(TL_collapsed_Tsum)
-write.csv(TL_collapsed_Tsum, file = "Sample_Tsums.csv")
 
 ## create cB for half life analysis
 TL_cB <- TL_filt %>% dplyr::select(cell_code, mol_code, nT, TC, EF) %>%
